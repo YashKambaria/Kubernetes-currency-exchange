@@ -36,6 +36,8 @@ spec:
               key: CURRENCY_EXCHANGE_URI
               name: currency-conversion
         image: yashkambaria/yash-mmv2-currency-conversion-service:0.0.13-SNAPSHOT
+        ports:
+          - containerPort: 8100
         imagePullPolicy: IfNotPresent
         name: yash-mmv2-currency-conversion-service
         resources: {}
