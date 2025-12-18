@@ -6,7 +6,7 @@
 - Understood the responsibilities of the Control Plane and Worker Nodes.
 - Gained clarity on how components such as API Server, Scheduler, Controller Manager, etcd, kubelet, and kube-proxy interact.
 
-![Kubernetes Architecture](images/Screenshot 2025-12-16 at 6.18.49 PM.png)
+![Kubernetes Architecture](images/kubernetes.png)
 
 ### Docker Containerization
 - Learned Docker containerization concepts in depth.
@@ -18,14 +18,14 @@
 - Explored the Kubernetes Dashboard to monitor workloads in real time.
 - Observed Pods, Deployments, ReplicaSets, CPU usage, and memory usage directly from the dashboard.
 
-![Kubernetes Dashboard Pods View](images/Screenshot 2025-12-18 at 9.33.08 AM.png)
+![Kubernetes Dashboard Pods View](images/minikubeDashboard.png)
 
 ### Practical Load Balancing Implementation
 - Implemented load balancing using Kubernetes Services.
 - Scaled the Currency Exchange Service to multiple pod replicas.
 - Verified load balancing by continuously sending requests and observing traffic being distributed across different pods.
 
-![Load Balancing Verification via Curl](images/Screenshot 2025-12-17 at 10.26.05 PM.png)
+![Load Balancing Verification via Curl](images/loadBalancing.png)
 
 - Confirmed load distribution through:
     - Different pod instance identifiers in responses
