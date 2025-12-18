@@ -4,4 +4,4 @@ metadata:
   name: currency-conversion
   namespace: default
 data:
-  CURRENCY_EXCHANGE_URI: "http://currency-exchange:8000"
+  CURRENCY_EXCHANGE_URI: "http://currency-exchange"
