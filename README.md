@@ -1,4 +1,5 @@
 # Kubernetes and Microservices
+
 ## What I Learned
 
 ### Kubernetes Fundamentals & Architecture
@@ -31,6 +32,65 @@
     - Different pod instance identifiers in responses
     - Real-time CPU and memory usage changes in the Kubernetes Dashboard
 - Practically validated Kubernetes’ built-in load balancing mechanism without external tools.
+
+---
+
+### GitOps CI/CD with Argo CD (Milestone Achieved)
+- Implemented **GitOps-based Continuous Delivery** using **Argo CD** with Kubernetes.
+- Understood the **difference between push-based and pull-based CI/CD** models.
+- Used **Git as the single source of truth** for Kubernetes manifests.
+- Connected a GitHub repository to Argo CD and deployed applications declaratively.
+- Managed **multiple microservices** as independent Argo CD Applications.
+- Observed real-time application states such as:
+    - `Synced` / `OutOfSync`
+    - `Healthy` / `Degraded`
+- Practically validated **automatic reconciliation**, where Argo CD restores resources if they are modified or deleted manually.
+- Gained hands-on experience with **operational GitOps workflows**, focusing on usage and behavior rather than internal controller implementation.
+
+> Note: At this stage, the focus was on **practical GitOps usage and deployment workflows**.  
+> A deeper exploration of Argo CD internals (controllers, reconciliation loops, diffing logic) is planned for a later phase.
+
+---
+
+### GitOps Deployment Model
+- **Push-based CI/CD**:
+    - CI pipelines push changes directly to the Kubernetes cluster.
+    - Higher risk of configuration drift between Git and cluster state.
+- **Pull-based GitOps (Argo CD)**:
+    - Argo CD continuously pulls the desired state from Git.
+    - Kubernetes cluster is automatically reconciled with Git.
+    - More reliable, auditable, and production-aligned approach.
+
+---
+
+### Argo CD Dashboard – Practical Observations
+- Used the Argo CD Dashboard to:
+    - Monitor application health and synchronization status.
+    - Visualize Kubernetes resources such as Deployments, Services, and Pods.
+    - Trigger manual syncs and observe automated reconciliation.
+    - Validate rollouts and updates driven entirely by Git commits.
+
+![Argo CD From Lens](images/lensArgo.png)
+
+
+![Argo CD Application Details](images/argoDashboard.png)
+
+
+![Argo CD Application Details](images/currencyExargo.png)
+
+![Argo CD Application Details](images/currencyConArgo.png)
+
+
+
+---
+
+### End-to-End CI/CD Flow Implemented
+1. Code changes pushed to GitHub.
+2. Kubernetes manifests updated in Git.
+3. Argo CD detects changes automatically.
+4. Kubernetes cluster state reconciled to match Git.
+5. Load-balanced microservices updated without manual `kubectl apply`.
+
 
 
 ---
