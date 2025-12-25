@@ -3,18 +3,12 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-  creationTimestamp: "2025-12-17T15:34:17Z"
-  generation: 2
   labels:
     app: currency-exchange
   name: currency-exchange
   namespace: default
-  resourceVersion: "5187"
-  uid: ad82e393-2fb2-4ad3-bf3d-ddbf9f7c7eaa
 spec:
-  progressDeadlineSeconds: 600
   replicas: 3
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: currency-exchange
@@ -32,30 +26,5 @@ spec:
       - image: yashkambaria/yash-mmv2-currency-exchange-service:0.0.11-SNAPSHOT
         imagePullPolicy: IfNotPresent
         name: yash-mmv2-currency-exchange-service
-        resources: {}
-        terminationMessagePath: /dev/termination-log
-        terminationMessagePolicy: File
-      dnsPolicy: ClusterFirst
       restartPolicy: Always
-      schedulerName: default-scheduler
-      securityContext: {}
-      terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 3
-  conditions:
-  - lastTransitionTime: "2025-12-17T15:34:17Z"
-    lastUpdateTime: "2025-12-17T15:34:18Z"
-    message: ReplicaSet "currency-exchange-c45c4ff66" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2025-12-17T16:50:53Z"
-    lastUpdateTime: "2025-12-17T16:50:53Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  observedGeneration: 2
-  readyReplicas: 3
-  replicas: 3
-  updatedReplicas: 3
+
